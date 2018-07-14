@@ -1,5 +1,5 @@
 # web-425
  Angular with TypeScript
-#contributors
+# contributors
 Professor Krasso - Bellevue University 
 Johnny Vanderhorst - Bellevue University
