@@ -1,0 +1,21 @@
+.menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  .menu a:visited {
+    color: white;
+  }
+
+
+
+
