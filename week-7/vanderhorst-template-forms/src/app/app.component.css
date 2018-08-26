@@ -1,0 +1,45 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.container {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+}
+  
+  .sidenav {
+    display: flex;
+    padding: 50px;
+    align-content: center;
+    width: 300px;
+    font-weight: 800;
+}
+
+.card-layout {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.form-assignment {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.password-group {
+    display: flex;
+    flex-direction: column;
+}

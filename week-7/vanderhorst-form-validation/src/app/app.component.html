@@ -1,0 +1,63 @@
+<mat-toolbar class="menu" role="header" color="primary">
+  <mat-toolbar-row>
+    <button mat-button class="toolbar__icon-button mat-button">
+      <a routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span style="margin-left: 5px !important;">WEB 425</span>
+      </a>
+    </button>
+        
+    <div fxFlex></div>
+
+    <!-- User Profile -->
+    <button class="toolbar__icon-button" [matMenuTriggerFor]="menu" mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>perm_contact_calendar</mat-icon>
+        <span>My Profile</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="container" >
+  <mat-sidenav mode="side" opened class="sidenav">Welcome to my Forms Assignment</mat-sidenav>
+  <mat-sidenav-content>
+    
+    <mat-card class="card-layout">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+        <mat-card-title>Phone Validator</mat-card-title>
+          <div class="form-layout">
+            Phone number :
+              <input type="text" name="telephone" ngModel
+                      required
+                      pattern="[0-9]*"
+                      minlength="10"
+                      #phone="ngModel"
+                      [class.hasError]="phone.isvalid && phone.touched">
+            
+            
+            <button mat-raised-button type="submit" [disabled]="f.invalid">Submit</button>
+             
+            <div [hidden]="phone.valid || phone.pristine">
+              <div class="error" [hidden]="!phone.hasError('minlength')">Phone has to have at least 10 digits</div>
+              <div class="error" [hidden]="!phone.hasError('required')">Phone is required</div>
+              <div class="error" [hidden]="!phone.hasError('pattern')">Only digits are allowed</div>
+            </div>
+          </div>
+            
+      </form>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
