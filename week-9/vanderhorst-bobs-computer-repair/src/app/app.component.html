@@ -1,0 +1,72 @@
+<body class="mat-app-background">
+  <!--Navigation-->
+  <mat-toolbar class="menu" role="header" color="primary">
+    <mat-toolbar-row>
+      <button mat-button class="toolbar__icon-button mat-button" [routerLink]="['/']">
+        <mat-icon>home</mat-icon>Home
+      </button>
+      <button mat-button class="toolbar__icon-button mat-button" [routerLink]="['/services']">
+        <mat-icon>computer</mat-icon>Services
+      </button>
+      <div fxFlex></div>
+      <!-- User Profile -->
+      <button class="toolbar__icon-button" [matMenuTriggerFor]="menu" mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
+      </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>perm_contact_calendar</mat-icon>
+              <span>My Profile</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+              <span>Settings</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+              <span>Logout</span>
+          </button>
+          </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <!--Banner-->
+  <div class="banner">
+    <div class="wrapper">
+      <div class="banner-image">
+        <img src="../assets/images/bob-logo-2.png">
+      </div>
+      <div class="banner-content">
+        <h2>Our tech experts keep their fingers on the pulse of new technology, so you can stay up-to-date on what’s hot, as well as what’s just around the corner. Whether you’re interested in top tech designed to make life more convenient, innovations that speed up and automate mundane tasks, or the “wow” tech that makes your heart beat faster, we can help you figure out what to buy, and how to put it to its best use.</h2>
+      </div>
+    </div>  
+  </div>
+  <!--Shop Content-->
+  <div class="shop-content wrapper">
+    <div class="card-row">
+      <mat-card class="image-one">
+        <img mat-card-image src="../assets/images/business-computer-connection-450035.png">
+        <mat-card-content>
+          <h3>Get questions answered and problems solved 24/7/365.</h3>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="image-two">
+        <img mat-card-image src="../assets/images/cables-close-up-computer-257736.png">
+        <mat-card-content>
+          <h3>We'll provide you with the help you need to get more out of your tech.</h3>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="image-three">
+        <img mat-card-image src="../assets/images/analogue-business-close-up-117729.png">
+        <mat-card-content>
+          <h3>We'll get your product up and running and show you how to use it.</h3>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <!--Component Wrapper-->
+  <div class="space-filler">
+    <div class="wrapper component-view">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</body>

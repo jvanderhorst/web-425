@@ -1,0 +1,84 @@
+/*font-family: 'Roboto', sans-serif;
+font-family: 'PT Sans', sans-serif;*/
+
+/*Body Styles*/
+body {
+  margin: -10px;
+  padding: -10px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/*Toolbar*/
+.menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+}
+  
+.wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Banner*/
+.banner {
+    background-image: linear-gradient(#2e3192, #27aae1);
+    left: 0;
+    right: 0;
+    padding: 50px;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    color: white;
+}
+
+.banner-image {
+  float: left;
+}
+
+.banner-content {
+  margin: 0 250px;
+}
+
+/*Shop Details*/
+.shop-content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.shop-content mat-card {
+  max-width: 300px;
+  min-width: 100px;
+  margin: 0 50px;
+}
+
+.shop-content img {
+  max-width: 300px;
+  min-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.card-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Component View*/
+.component-view {
+  position: relative;
+}
+
+.space-filler {
+  background-image: linear-gradient(#27aae1, #a4dbea);
+  height: 1000px;
+}
